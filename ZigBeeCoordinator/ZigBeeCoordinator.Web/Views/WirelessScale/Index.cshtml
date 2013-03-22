@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Wireless Scale";
+}
+<h2>@ViewBag.Message</h2>
+<p>
+    <h3>History</h3>
+
+    <table>
+        <tr>
+            <td valign="top">
+                <table>
+                    <tr>
+                        <td>
+                            <img width="600" height="300" alt="History All" src="HistoryChart?userId=@ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser.Finder.GetCurrentUserId()&width=600&height=300&chartType=Week" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img width="600" height="300" alt="History All" src="HistoryChart?userId=@ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser.Finder.GetCurrentUserId()&width=600&height=300&chartType=Month" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img width="600" height="300" alt="History All" src="HistoryChart?userId=@ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser.Finder.GetCurrentUserId()&width=600&height=300&chartType=All" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date/Time</th>
+                            <th>Value</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData data in ViewBag.WirelessScaleDatas)
+                        {
+                            <tr>
+                                <td>@data.ReceivedDateTime</td>
+                                <td>@data.Value</td>
+                                <td>@Html.ActionLink("Delete", "DeleteValue", new { Controller = "WirelessScale", WirelessScaleDataId = data.WirelessScaleDataId })</td>
+                            </tr>        
+                        }
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <h3>Manual Input</h3>
+    @{Html.BeginForm("ManualInput", "WirelessScale");}
+        Date: @Html.TextBox("date", DateTime.Now.ToString("d"), new { style = "width: 7em;" })
+            @Html.TextBox("time", DateTime.Now.ToString("t"), new { style = "width: 7em;" })<br />
+        Weight: @Html.TextBox("weight")<br />
+        <input type="submit" value="Save" />
+    @{Html.EndForm();}
+
+    <h3>User Settings</h3>
+    @{Html.BeginForm("UserSettings", "WirelessScale");}
+        Goal Weight: @Html.TextBox("goalWeight", (string)ViewBag.GoalWeight)<br />
+        <input type="submit" value="Save" />
+    @{Html.EndForm();}
+
+    <script>
+        $(function () {
+            $("#date").datepicker({
+                showOn: "both",
+                buttonImage: '@Url.Content("~/Content/Images/calendar.gif")',
+                buttonImageOnly: true
+            });
+        });
+    </script>
+</p>

@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<!--This file is meant to be opened with AVR Project IDE, http://code.google.com/p/avr-project-ide/ -->
+<Project>
+  <DirPath>F:\dev\home\fivevolt\DummyLoad\Firmware</DirPath>
+  <HasBeenConfigged>true</HasBeenConfigged>
+  <Device>atmega644p</Device>
+  <ClockFreq>1000000.00</ClockFreq>
+  <LinkerOpt />
+  <OtherOpt>-Wall -gdwarf-2</OtherOpt>
+  <OtherOptionsForC>-std=gnu99</OtherOptionsForC>
+  <OtherOptionsForCPP />
+  <OtherOptionsForS />
+  <OutputDir>output</OutputDir>
+  <Optimization>-Os</Optimization>
+  <UseInitStack>false</UseInitStack>
+  <InitStackAddr>0xFFFF</InitStackAddr>
+  <PackStructs>true</PackStructs>
+  <ShortEnums>true</ShortEnums>
+  <UnsignedBitfields>true</UnsignedBitfields>
+  <UnsignedChars>true</UnsignedChars>
+  <FunctionSections>true</FunctionSections>
+  <DataSections>true</DataSections>
+  <IncludeDirList>
+    <DirPath>F:\dev\home\fivevolt\ATmegaLib</DirPath>
+  </IncludeDirList>
+  <LibraryDirList />
+  <LinkObjList />
+  <LinkLibList />
+  <MemorySegList />
+  <BurnPart>atmega644p</BurnPart>
+  <BurnProgrammer>avrispmkii</BurnProgrammer>
+  <BurnOptions />
+  <BurnPort />
+  <BurnFuseBox />
+  <BurnBaud>0</BurnBaud>
+  <BurnAutoReset>false</BurnAutoReset>
+  <LastFile>DummyLoad.cpp</LastFile>
+  <FileList>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\DummyLoad\Firmware\DummyLoad.cpp'-->
+      <RelPath>DummyLoad.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>2134</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\IO.cpp'-->
+      <RelPath>..\..\ATmegaLib\IO.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\MCP492x.cpp'-->
+      <RelPath>..\..\ATmegaLib\MCP492x.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\SPI.cpp'-->
+      <RelPath>..\..\ATmegaLib\SPI.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\MCP492x.h'-->
+      <RelPath>..\..\ATmegaLib\MCP492x.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\IO.h'-->
+      <RelPath>..\..\ATmegaLib\IO.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>2540</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\SPI.h'-->
+      <RelPath>..\..\ATmegaLib\SPI.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>1512</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\LCD_HD44780.h'-->
+      <RelPath>..\..\ATmegaLib\LCD_HD44780.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\LCD_HD44780.cpp'-->
+      <RelPath>..\..\ATmegaLib\LCD_HD44780.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\Print.cpp'-->
+      <RelPath>..\..\ATmegaLib\Print.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\Print.h'-->
+      <RelPath>..\..\ATmegaLib\Print.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\Serial.h'-->
+      <RelPath>..\..\ATmegaLib\Serial.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\Serial.cpp'-->
+      <RelPath>..\..\ATmegaLib\Serial.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\ADC.cpp'-->
+      <RelPath>..\..\ATmegaLib\ADC.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>180</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\ADC.h'-->
+      <RelPath>..\..\ATmegaLib\ADC.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>201</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\Stream.cpp'-->
+      <RelPath>..\..\ATmegaLib\Stream.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\Stream.h'-->
+      <RelPath>..\..\ATmegaLib\Stream.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>335</CursorPos>
+      <Bookmarks />
+    </File>
+  </FileList>
+  <ArduinoCoreOverride />
+  <AVRStudioXMLStuff />
+</Project>

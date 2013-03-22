@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    <ul>
+        @if(Request.IsAuthenticated) {
+            <li>@Html.ActionLink("Wireless Scale", "Index", new { Controller = "WirelessScale", userId = ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser.Finder.GetCurrentUserId() })</li>
+        }
+    </ul>
+</p>

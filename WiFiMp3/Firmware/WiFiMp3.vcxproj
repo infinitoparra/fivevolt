@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="maple\common.inc" />
+    <None Include="maple\include\common.inc" />
+    <None Include="maple\include\exc.S" />
+    <None Include="maple\include\libcs3_stm32_high_density.a" />
+    <None Include="maple\include\libcs3_stm32_med_density.a" />
+    <None Include="maple\include\LICENSE" />
+    <None Include="maple\include\names.inc" />
+    <None Include="maple\libcs3_stm32_high_density.a" />
+    <None Include="maple\names.inc" />
+    <None Include="_build.bat" />
+    <None Include="_clean.bat" />
+    <None Include="_rebuild.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IoPin.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapleFramework.cpp" />
+    <ClCompile Include="maple\include\adc.c" />
+    <ClCompile Include="maple\include\bkp.c" />
+    <ClCompile Include="maple\include\boards.cpp" />
+    <ClCompile Include="maple\include\cxxabi-compat.cpp" />
+    <ClCompile Include="maple\include\dac.c" />
+    <ClCompile Include="maple\include\descriptors.c" />
+    <ClCompile Include="maple\include\dma.c" />
+    <ClCompile Include="maple\include\exti.c" />
+    <ClCompile Include="maple\include\ext_interrupts.cpp" />
+    <ClCompile Include="maple\include\flash.c" />
+    <ClCompile Include="maple\include\fsmc.c" />
+    <ClCompile Include="maple\include\gpio.c" />
+    <ClCompile Include="maple\include\HardwareSerial.cpp" />
+    <ClCompile Include="maple\include\HardwareSPI.cpp" />
+    <ClCompile Include="maple\include\HardwareTimer.cpp" />
+    <ClCompile Include="maple\include\i2c.c" />
+    <ClCompile Include="maple\include\iwdg.c" />
+    <ClCompile Include="maple\include\main.cxx" />
+    <ClCompile Include="maple\include\maple.cpp" />
+    <ClCompile Include="maple\include\maple_mini.cpp" />
+    <ClCompile Include="maple\include\maple_native.cpp" />
+    <ClCompile Include="maple\include\maple_RET6.cpp" />
+    <ClCompile Include="maple\include\nvic.c" />
+    <ClCompile Include="maple\include\Print.cpp" />
+    <ClCompile Include="maple\include\pwm.cpp" />
+    <ClCompile Include="maple\include\pwr.c" />
+    <ClCompile Include="maple\include\rcc.c" />
+    <ClCompile Include="maple\include\spi.c" />
+    <ClCompile Include="maple\include\syscalls.c" />
+    <ClCompile Include="maple\include\systick.c" />
+    <ClCompile Include="maple\include\timer.c" />
+    <ClCompile Include="maple\include\usart.c" />
+    <ClCompile Include="maple\include\usb.c" />
+    <ClCompile Include="maple\include\usb_callbacks.c" />
+    <ClCompile Include="maple\include\usb_core.c" />
+    <ClCompile Include="maple\include\usb_hardware.c" />
+    <ClCompile Include="maple\include\usb_init.c" />
+    <ClCompile Include="maple\include\usb_int.c" />
+    <ClCompile Include="maple\include\usb_mem.c" />
+    <ClCompile Include="maple\include\usb_regs.c" />
+    <ClCompile Include="maple\include\usb_serial.cpp" />
+    <ClCompile Include="maple\include\util.c" />
+    <ClCompile Include="maple\include\wirish_analog.cpp" />
+    <ClCompile Include="maple\include\wirish_digital.cpp" />
+    <ClCompile Include="maple\include\wirish_math.cpp" />
+    <ClCompile Include="maple\include\wirish_shift.cpp" />
+    <ClCompile Include="maple\include\wirish_time.cpp" />
+    <ClCompile Include="Nokia6100ColorLcd.cpp" />
+    <ClCompile Include="SdCard.cpp" />
+    <ClCompile Include="SerialPort.cpp" />
+    <ClCompile Include="HardwareSpi.cpp" />
+    <ClCompile Include="StreamReaderWriter.cpp" />
+    <ClCompile Include="Vs1053Mp3Ic.cpp" />
+    <ClCompile Include="XBeeWifi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="IoPin.h" />
+    <ClInclude Include="IStream.h" />
+    <ClInclude Include="maple\include\adc.h" />
+    <ClInclude Include="maple\include\bitband.h" />
+    <ClInclude Include="maple\include\bits.h" />
+    <ClInclude Include="maple\include\bit_constants.h" />
+    <ClInclude Include="maple\include\bkp.h" />
+    <ClInclude Include="maple\include\boards.h" />
+    <ClInclude Include="maple\include\dac.h" />
+    <ClInclude Include="maple\include\delay.h" />
+    <ClInclude Include="maple\include\descriptors.h" />
+    <ClInclude Include="maple\include\dma.h" />
+    <ClInclude Include="maple\include\exti.h" />
+    <ClInclude Include="maple\include\ext_interrupts.h" />
+    <ClInclude Include="maple\include\flash.h" />
+    <ClInclude Include="maple\include\fsmc.h" />
+    <ClInclude Include="maple\include\gpio.h" />
+    <ClInclude Include="maple\include\HardwareSerial.h" />
+    <ClInclude Include="maple\include\HardwareSPI.h" />
+    <ClInclude Include="maple\include\HardwareTimer.h" />
+    <ClInclude Include="maple\include\i2c.h" />
+    <ClInclude Include="maple\include\io.h" />
+    <ClInclude Include="maple\include\iwdg.h" />
+    <ClInclude Include="maple\include\libmaple.h" />
+    <ClInclude Include="maple\include\libmaple_types.h" />
+    <ClInclude Include="maple\include\maple.h" />
+    <ClInclude Include="maple\include\maple_mini.h" />
+    <ClInclude Include="maple\include\maple_native.h" />
+    <ClInclude Include="maple\include\maple_RET6.h" />
+    <ClInclude Include="maple\include\nvic.h" />
+    <ClInclude Include="maple\include\Print.h" />
+    <ClInclude Include="maple\include\pwm.h" />
+    <ClInclude Include="maple\include\pwr.h" />
+    <ClInclude Include="maple\include\rcc.h" />
+    <ClInclude Include="maple\include\reent.h" />
+    <ClInclude Include="maple\include\ring_buffer.h" />
+    <ClInclude Include="maple\include\scb.h" />
+    <ClInclude Include="maple\include\spi.h" />
+    <ClInclude Include="maple\include\stm32.h" />
+    <ClInclude Include="maple\include\systick.h" />
+    <ClInclude Include="maple\include\timer.h" />
+    <ClInclude Include="maple\include\usart.h" />
+    <ClInclude Include="maple\include\usb.h" />
+    <ClInclude Include="maple\include\usb_callbacks.h" />
+    <ClInclude Include="maple\include\usb_config.h" />
+    <ClInclude Include="maple\include\usb_core.h" />
+    <ClInclude Include="maple\include\usb_def.h" />
+    <ClInclude Include="maple\include\usb_hardware.h" />
+    <ClInclude Include="maple\include\usb_init.h" />
+    <ClInclude Include="maple\include\usb_int.h" />
+    <ClInclude Include="maple\include\usb_lib.h" />
+    <ClInclude Include="maple\include\usb_mem.h" />
+    <ClInclude Include="maple\include\usb_regs.h" />
+    <ClInclude Include="maple\include\usb_serial.h" />
+    <ClInclude Include="maple\include\usb_type.h" />
+    <ClInclude Include="maple\include\util.h" />
+    <ClInclude Include="maple\include\wirish.h" />
+    <ClInclude Include="maple\include\wirish_debug.h" />
+    <ClInclude Include="maple\include\wirish_math.h" />
+    <ClInclude Include="maple\include\wirish_time.h" />
+    <ClInclude Include="maple\include\wirish_types.h" />
+    <ClInclude Include="maple\include\WProgram.h" />
+    <ClInclude Include="maple\include\_syslist.h" />
+    <ClInclude Include="Nokia6100ColorLcd.h" />
+    <ClInclude Include="SdCard.h" />
+    <ClInclude Include="SerialPort.h" />
+    <ClInclude Include="HardwareSpi.h" />
+    <ClInclude Include="StreamReaderWriter.h" />
+    <ClInclude Include="Vs1053Mp3Ic.h" />
+    <ClInclude Include="XBeeWifi.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C0C7475D-466D-40AA-B58A-3CC39F097D2A}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>_build.bat</NMakeBuildCommandLine>
+    <NMakeOutput>WiFiMp3.exe</NMakeOutput>
+    <NMakeCleanCommandLine>_clean.bat</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>_rebuild.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>$(SolutionDir)maple\include;$(IncludePath)</IncludePath>
+    <AdditionalOptions>-DSTM32_HIGH_DENSITY -DMCU_STM32F103RE -DBOARD_maple_RET6</AdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>_build.bat</NMakeBuildCommandLine>
+    <NMakeOutput>WiFiMp3.exe</NMakeOutput>
+    <NMakeCleanCommandLine>_clean.bat</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>_rebuild.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

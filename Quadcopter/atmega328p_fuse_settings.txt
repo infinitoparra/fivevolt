@@ -1,0 +1,11 @@
+BODLEVEL    Disabled
+RSTDISBL    False
+DWEN        False
+SPIEN       ?
+WDTON       False
+EESAVE      False
+BOOTSZ      size=1024, start addr=$3C00
+BOOTRST     True
+CKDIV8      False
+CKOUT       False
+SUT_CKSEL   Ext. Crystal Osc 8.0- Mhz 16K CK/14 CK + 65ms

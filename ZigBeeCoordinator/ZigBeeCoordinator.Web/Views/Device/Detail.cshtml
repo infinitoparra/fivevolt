@@ -1,0 +1,65 @@
+﻿@model ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice
+
+@{
+    ViewBag.Title = "Admin : Device Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table>
+    <tr>
+        <td>Device Address</td>
+        <td>@Model.DeviceAddressHtml</td>
+    </tr>
+    <tr>
+        <td>Network Address</td>
+        <td>@Model.NetworkAddressHtml</td>
+    </tr>
+    <tr>
+        <td>Device Type</td>
+        <td>@( Model.ZigBeeDeviceType == null ? "" : Model.ZigBeeDeviceType.Name )</td>
+    </tr>
+    <tr>
+        <td>Create Date/Time</td>
+        <td>@Model.CreatedDateTime</td>
+    </tr>
+    <tr>
+        <td>Last Packet Date/Time</td>
+        <td>@Model.LastPacketDateTime</td>
+    </tr>
+    <tr>
+        <td>Capabilities</td>
+        <td>
+            <ul>
+                @foreach (ZigBeeCoordinator.Lib.Models.Db.Capability capability in Model.Capabilities)
+                {
+                    <li>@capability.Name</li>
+                }
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Logs</td>
+        <td>
+            <table>
+                <thead>
+                    <tr>    
+                        <th>Date/Time</th>
+                        <th>Data Length</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceLog log in Model.ZigBeeDeviceLogs)
+                    {
+                        <tr>
+                            <td>@log.DateTime</td>
+                            <td>@log.PacketData.Length</td>
+                            <td>@log.PacketDataHtml</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+

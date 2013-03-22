@@ -1,0 +1,19 @@
+﻿<Window x:Class="Quadcopter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:Quadcopter="clr-namespace:Quadcopter" Closing="Window_Closing"
+        Title="MainWindow" Height="600" Width="900">
+    <TabControl x:Name="_tabs" SelectionChanged="_tabs_SelectionChanged">
+        <TabControl.Items>
+            <TabItem Header="HUD">
+                <Quadcopter:HudContainer x:Name="_hud" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </TabItem>
+            <TabItem Header="Raw">
+                <Quadcopter:Raw x:Name="_raw" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </TabItem>
+            <TabItem Header="Graphing">
+                <Quadcopter:Graphing x:Name="_graphing" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </TabItem>
+        </TabControl.Items>
+    </TabControl>
+</Window>

@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="maple">
+      <UniqueIdentifier>{e3cadf56-28be-4cff-9acc-9b65df7187a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="_build.bat" />
+    <None Include="_rebuild.bat" />
+    <None Include="_clean.bat" />
+    <None Include="maple\common.inc">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\libcs3_stm32_high_density.a">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\names.inc">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\include\common.inc">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\include\exc.S">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\include\libcs3_stm32_high_density.a">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\include\libcs3_stm32_med_density.a">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\include\LICENSE">
+      <Filter>maple</Filter>
+    </None>
+    <None Include="maple\include\names.inc">
+      <Filter>maple</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\gpio.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\rcc.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\flash.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\util.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usart.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\nvic.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\adc.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\timer.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\boards.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\maple_RET6.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\systick.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_callbacks.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_core.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_hardware.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_init.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_int.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_mem.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_regs.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\usb_serial.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\descriptors.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\pwm.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\ext_interrupts.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\wirish_analog.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\wirish_digital.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\wirish_math.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\wirish_shift.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\wirish_time.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\HardwareSerial.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\HardwareSPI.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\HardwareTimer.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\exti.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\Print.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\spi.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\syscalls.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\bkp.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\cxxabi-compat.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\dac.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\dma.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\fsmc.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\i2c.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\iwdg.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\main.cxx">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\maple.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\maple_mini.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\maple_native.cpp">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="maple\include\pwr.c">
+      <Filter>maple</Filter>
+    </ClCompile>
+    <ClCompile Include="IoPin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vs1053Mp3Ic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapleFramework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Nokia6100ColorLcd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XBeeWifi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SdCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamReaderWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareSpi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="maple\include\delay.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\gpio.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\libmaple_types.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\rcc.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\stm32.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\util.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\bitband.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\flash.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\libmaple.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usart.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\nvic.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\ring_buffer.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\adc.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\timer.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\scb.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\boards.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\wirish_types.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\maple_RET6.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\systick.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_callbacks.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_config.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_core.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_def.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_hardware.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_init.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_int.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_lib.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_mem.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_regs.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_serial.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\usb_type.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\descriptors.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\wirish.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\io.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\wirish_time.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\bits.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\bit_constants.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\pwm.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\ext_interrupts.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\wirish_debug.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\wirish_math.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\HardwareSerial.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\HardwareSPI.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\HardwareTimer.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\exti.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\Print.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\spi.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\_syslist.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\bkp.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\dac.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\dma.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\fsmc.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\i2c.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\iwdg.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\maple.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\maple_mini.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\maple_native.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\pwr.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\reent.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="maple\include\WProgram.h">
+      <Filter>maple</Filter>
+    </ClInclude>
+    <ClInclude Include="IoPin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vs1053Mp3Ic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nokia6100ColorLcd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XBeeWifi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SdCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StreamReaderWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareSpi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

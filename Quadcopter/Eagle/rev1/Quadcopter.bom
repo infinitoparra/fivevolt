@@ -1,0 +1,85 @@
+Partlist exported from F:/dev/home/Quadcopter/Eagle/Quadcopter/Quadcopter/Quadcopter.sch at 8/15/2010 10:20:56 AM
+
+Part  Value          Device             Package               Description                         
+C1    22pF           CAP1206            1206                  Capacitor                           
+C2    22pF           CAP1206            1206                  Capacitor                           
+C3    22pF           CAP1206            1206                  Capacitor                           
+C4    22pF           CAP1206            1206                  Capacitor                           
+C5    22pF           CAP1206            1206                  Capacitor                           
+C6    22pF           CAP1206            1206                  Capacitor                           
+C7    0.1uF          CAP1206            1206                  Capacitor                           
+C8    0.1uF          CAP1206            1206                  Capacitor                           
+C9    0.1uF          CAP1206            1206                  Capacitor                           
+C10   0.1uF          CAP1206            1206                  Capacitor                           
+C11   0.1uF          CAP1206            1206                  Capacitor                           
+C12   0.1uF          CAP1206            1206                  Capacitor                           
+C15   0.1uF          CAP1206            1206                  Capacitor                           
+C16   0.1uF          CAP1206            1206                  Capacitor                           
+C17   100uF          CPOL-USE5-8.5      E5-8,5                POLARIZED CAPACITOR, American symbol
+C18   10uF           CPOL-USE2-4        E2-4                  POLARIZED CAPACITOR, American symbol
+C19   10uF           CPOL-USE2-4        E2-4                  POLARIZED CAPACITOR, American symbol
+D1    1N4001         DIODEPTH           DIODE-1N4001          Diode                               
+IC1   7805TV         7805TV             TO220V                Positive VOLTAGE REGULATOR          
+IC2   LM1117         LM1117             TO220V                                                    
+ICSP1 AVR-ICSP       AVR-ICSP           AVR-ICSP                                                  
+ICSP2 AVR-ICSP       AVR-ICSP           AVR-ICSP                                                  
+ICSP3 AVR-ICSP       AVR-ICSP           AVR-ICSP                                                  
+JP1   JP1            M023.5MM           SCREWTERMINAL-3.5MM-2 Header 2                            
+JP2   PWR            M03PTH             1X03                  Header 3                            
+JP3   M11PTH         M11PTH             1X11                  Header 11                           
+JP4   MOTOR1         M03PTH             1X03                  Header 3                            
+JP5   IMU-AUX-JP1    M03PTH             1X03                  Header 3                            
+JP6   MOTOR3         M03PTH             1X03                  Header 3                            
+JP7   MOTOR2         M03PTH             1X03                  Header 3                            
+JP8   MOTOR4         M03PTH             1X03                  Header 3                            
+JP9   CH1            M03PTH             1X03                  Header 3                            
+JP10  CH2            M03PTH             1X03                  Header 3                            
+JP11  CH3            M03PTH             1X03                  Header 3                            
+JP12  CH4            M03PTH             1X03                  Header 3                            
+JP13  CH5            M03PTH             1X03                  Header 3                            
+JP14  CH6            M03PTH             1X03                  Header 3                            
+JP15  I2C            M03PTH             1X03                  Header 3                            
+JP16  EXT-BAT-WARN   M02PTH             1X02                  Header 2                            
+JP17  SERIAL2        M03PTH             1X03                  Header 3                            
+JP18  SERIAL3        M03PTH             1X03                  Header 3                            
+JP19  GPS            M07                1X07                  Header 7                            
+JP20  IMU-I2C        M03PTH             1X03                  Header 3                            
+JP21  COMPASS        M04PTH             1X04                  Header 4                            
+JP22  STAND-OFF      STAND-OFF          STAND-OFF             Stand Off                           
+JP23  STAND-OFF      STAND-OFF          STAND-OFF             Stand Off                           
+JP24  STAND-OFF      STAND-OFF          STAND-OFF             Stand Off                           
+JP25  STAND-OFF      STAND-OFF          STAND-OFF             Stand Off                           
+JP26  PWR            M03PTH             1X03                  Header 3                            
+JP27  NAV            M03PTH             1X03                  Header 3                            
+JP28  NAVGND         M03PTH             1X03                  Header 3                            
+JP29  IMU-AUX-JP2    M03PTH             1X03                  Header 3                            
+LED1  RECV-SIG       LED1206            LED-1206              LEDs                                
+LED2  BAT-WARN       LED1206            LED-1206              LEDs                                
+Q1    16MHz          CRYSTALHC49US      HC49US                Crystals                            
+Q2    16MHz          CRYSTALHC49US      HC49US                Crystals                            
+Q3    16MHz          CRYSTALHC49US      HC49US                Crystals                            
+Q4    2N2222         TRANSISTOR_NPNTO92 TO-92                 Transistor NPN                      
+R1    10K            RESISTOR1206       1206                  Resistor                            
+R2    10K            RESISTOR1206       1206                  Resistor                            
+R3    10K            RESISTOR1206       1206                  Resistor                            
+R4    150            RESISTOR1206       1206                  Resistor                            
+R5    150            RESISTOR1206       1206                  Resistor                            
+R6    1K             RESISTOR1206       1206                  Resistor                            
+R7    33             RESISTOR1206       1206                  Resistor                            
+R8    33             RESISTOR1206       1206                  Resistor                            
+R9    33             RESISTOR1206       1206                  Resistor                            
+R10   150            RESISTOR1206       1206                  Resistor                            
+R11   4.7K           RESISTOR1206       1206                  Resistor                            
+R12   4.7K           RESISTOR1206       1206                  Resistor                            
+R13   4.7K           RESISTOR1206       1206                  Resistor                            
+R14   4.7K           RESISTOR1206       1206                  Resistor                            
+R15   10K            TRIM_US-B25P       B25P                  POTENTIOMETER                       
+R16   22K            RESISTOR1206       1206                  Resistor                            
+S1    RST1           TAC_SWITCHPTH      TACTILE-PTH           Momentary Switch                    
+S2    RST2           TAC_SWITCHPTH      TACTILE-PTH           Momentary Switch                    
+S3    RST3           TAC_SWITCHPTH      TACTILE-PTH           Momentary Switch                    
+SG1   BUZZERNS       BUZZERNS           BUZZER-12MM-NS        Buzzer 12mm                         
+U$12  IMU-6DOF-RAZOR IMU-6DOF-RAZOR     IMU-6DOF-RAZOR                                            
+U1    ATMEGA168      ATMEGA168          TQFP32-08                                                 
+U2    ATMEGA168      ATMEGA168          TQFP32-08                                                 
+U3    ATMEGA168      ATMEGA168          TQFP32-08                                                 

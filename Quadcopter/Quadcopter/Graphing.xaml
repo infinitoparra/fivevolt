@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Quadcopter.Graphing"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:GraphLib="clr-namespace:GraphLib;assembly=GraphLib" mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Right">
+            <GroupBox Header="Series">
+                <StackPanel x:Name="_series">
+                    
+                </StackPanel>
+            </GroupBox>
+
+            <GroupBox Header="Mouse Location">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Grid.Column="0" Grid.Row="0" Text="X:" TextAlignment="Right"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" x:Name="_mouseLocationX" Text=""/>
+                    <TextBlock Grid.Column="0" Grid.Row="1" Text="Y:" TextAlignment="Right"/>
+                    <TextBlock Grid.Column="1" Grid.Row="1" x:Name="_mouseLocationY" Text=""/>
+                </Grid>
+            </GroupBox>
+            
+            <GroupBox Header="Seconds To Graph">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Right" Text="{Binding ElementName=_secondsToGraph, Path=Value, StringFormat=##0}" />
+                    <Slider x:Name="_secondsToGraph" Minimum="5" Maximum="240" Value="30" ValueChanged="_secondsToGraph_ValueChanged" />
+                </DockPanel>
+            </GroupBox>
+            
+            <Button Content="Clear Data" Margin="5 0 5 5" Click="_clearData_Click"/>
+            <CheckBox x:Name="_pause" Content="Pause" Margin="5 0 5 5" Click="_pause_Click" />
+        </StackPanel>
+
+        <GraphLib:GraphControl x:Name="_graph" MouseMove="_graph_MouseMove"/>
+    </DockPanel>
+</UserControl>

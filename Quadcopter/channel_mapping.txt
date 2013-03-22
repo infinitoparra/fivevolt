@@ -1,0 +1,6 @@
+1 Aileron
+2 Elevator
+3 Throttle
+4 Rudder
+5 Gear/Enable
+6 Flaps

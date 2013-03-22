@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZigBeeCoordinator.Lib.Models.Db.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ZigBeeCoordinatorLibModelsDbStoreContainer">
+          <EntitySet Name="Capability" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.Capability" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CoordinatorUser" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.CoordinatorUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DeviceCapability" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.DeviceCapability" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserSetting" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.UserSetting" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WirelessScaleData" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.WirelessScaleData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ZigBeeDevice" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ZigBeeDeviceLog" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDeviceLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ZigBeeDeviceType" EntityType="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDeviceType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="Capability_DeviceCapabilityFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.Capability_DeviceCapabilityFk">
+            <End Role="Capability" EntitySet="Capability" />
+            <End Role="DeviceCapability" EntitySet="DeviceCapability" />
+          </AssociationSet>
+          <AssociationSet Name="UserSetting_UserFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.UserSetting_UserFk">
+            <End Role="CoordinatorUser" EntitySet="CoordinatorUser" />
+            <End Role="UserSetting" EntitySet="UserSetting" />
+          </AssociationSet>
+          <AssociationSet Name="WirelessScaleData_UserFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.WirelessScaleData_UserFk">
+            <End Role="CoordinatorUser" EntitySet="CoordinatorUser" />
+            <End Role="WirelessScaleData" EntitySet="WirelessScaleData" />
+          </AssociationSet>
+          <AssociationSet Name="WirelessScaleData_ZigBeeDeviceFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.WirelessScaleData_ZigBeeDeviceFk">
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevice" />
+            <End Role="WirelessScaleData" EntitySet="WirelessScaleData" />
+          </AssociationSet>
+          <AssociationSet Name="ZigBeeDevice_DeviceCapabilityFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice_DeviceCapabilityFk">
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevice" />
+            <End Role="DeviceCapability" EntitySet="DeviceCapability" />
+          </AssociationSet>
+          <AssociationSet Name="ZigBeeDevice_ZigBeeDeviceLogFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice_ZigBeeDeviceLogFk">
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevice" />
+            <End Role="ZigBeeDeviceLog" EntitySet="ZigBeeDeviceLog" />
+          </AssociationSet>
+          <AssociationSet Name="ZigBeeDevice_ZigBeeDeviceTypeFk" Association="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice_ZigBeeDeviceTypeFk">
+            <End Role="ZigBeeDeviceType" EntitySet="ZigBeeDeviceType" />
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevice" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Capability">
+          <Key>
+            <PropertyRef Name="CapabilityId" />
+          </Key>
+          <Property Name="CapabilityId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="CoordinatorUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="DeviceCapability">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceId" />
+            <PropertyRef Name="CapabilityId" />
+          </Key>
+          <Property Name="ZigBeeDeviceId" Type="int" Nullable="false" />
+          <Property Name="CapabilityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserSetting">
+          <Key>
+            <PropertyRef Name="UserSettingId" />
+          </Key>
+          <Property Name="UserSettingId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Value" Type="ntext" />
+        </EntityType>
+        <EntityType Name="WirelessScaleData">
+          <Key>
+            <PropertyRef Name="WirelessScaleDataId" />
+          </Key>
+          <Property Name="WirelessScaleDataId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="ZigBeeDeviceId" Type="int" />
+          <Property Name="ReceivedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="Value" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ZigBeeDevice">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceId" />
+          </Key>
+          <Property Name="ZigBeeDeviceId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DeviceAddress" Type="varbinary" Nullable="false" MaxLength="8" />
+          <Property Name="NetworkAddress" Type="varbinary" MaxLength="2" />
+          <Property Name="CreatedDateTime" Type="datetime" Nullable="false" />
+          <Property Name="LastPacketDateTime" Type="datetime" />
+          <Property Name="ZigBeeDeviceTypeId" Type="int" />
+        </EntityType>
+        <EntityType Name="ZigBeeDeviceLog">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceLogId" />
+          </Key>
+          <Property Name="ZigBeeDeviceLogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ZigBeeDeviceId" Type="int" Nullable="false" />
+          <Property Name="DateTime" Type="datetime" Nullable="false" />
+          <Property Name="PacketData" Type="image" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ZigBeeDeviceType">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceTypeId" />
+          </Key>
+          <Property Name="ZigBeeDeviceTypeId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <Association Name="Capability_DeviceCapabilityFk">
+          <End Role="Capability" Type="ZigBeeCoordinator.Lib.Models.Db.Store.Capability" Multiplicity="1" />
+          <End Role="DeviceCapability" Type="ZigBeeCoordinator.Lib.Models.Db.Store.DeviceCapability" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Capability">
+              <PropertyRef Name="CapabilityId" />
+            </Principal>
+            <Dependent Role="DeviceCapability">
+              <PropertyRef Name="CapabilityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UserSetting_UserFk">
+          <End Role="CoordinatorUser" Type="ZigBeeCoordinator.Lib.Models.Db.Store.CoordinatorUser" Multiplicity="1" />
+          <End Role="UserSetting" Type="ZigBeeCoordinator.Lib.Models.Db.Store.UserSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatorUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserSetting">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WirelessScaleData_UserFk">
+          <End Role="CoordinatorUser" Type="ZigBeeCoordinator.Lib.Models.Db.Store.CoordinatorUser" Multiplicity="1" />
+          <End Role="WirelessScaleData" Type="ZigBeeCoordinator.Lib.Models.Db.Store.WirelessScaleData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatorUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="WirelessScaleData">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WirelessScaleData_ZigBeeDeviceFk">
+          <End Role="ZigBeeDevice" Type="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice" Multiplicity="0..1" />
+          <End Role="WirelessScaleData" Type="ZigBeeCoordinator.Lib.Models.Db.Store.WirelessScaleData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Principal>
+            <Dependent Role="WirelessScaleData">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ZigBeeDevice_DeviceCapabilityFk">
+          <End Role="ZigBeeDevice" Type="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice" Multiplicity="1" />
+          <End Role="DeviceCapability" Type="ZigBeeCoordinator.Lib.Models.Db.Store.DeviceCapability" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Principal>
+            <Dependent Role="DeviceCapability">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ZigBeeDevice_ZigBeeDeviceLogFk">
+          <End Role="ZigBeeDevice" Type="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice" Multiplicity="1" />
+          <End Role="ZigBeeDeviceLog" Type="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDeviceLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Principal>
+            <Dependent Role="ZigBeeDeviceLog">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ZigBeeDevice_ZigBeeDeviceTypeFk">
+          <End Role="ZigBeeDeviceType" Type="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDeviceType" Multiplicity="0..1" />
+          <End Role="ZigBeeDevice" Type="ZigBeeCoordinator.Lib.Models.Db.Store.ZigBeeDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDeviceType">
+              <PropertyRef Name="ZigBeeDeviceTypeId" />
+            </Principal>
+            <Dependent Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZigBeeCoordinator.Lib.Models.Db" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ZigBeeCoordinatorEntities" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="Capabilities" EntityType="ZigBeeCoordinator.Lib.Models.Db.Capability" />
+          <EntitySet Name="ZigBeeDevices" EntityType="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice" />
+          <EntitySet Name="ZigBeeDeviceLogs" EntityType="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceLog" />
+          <AssociationSet Name="ZigBeeDevice_ZigBeeDeviceLogFk" Association="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceLogFk">
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevices" />
+            <End Role="ZigBeeDeviceLog" EntitySet="ZigBeeDeviceLogs" />
+          </AssociationSet>
+          <EntitySet Name="ZigBeeDeviceTypes" EntityType="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceType" />
+          <AssociationSet Name="ZigBeeDevice_ZigBeeDeviceTypeFk" Association="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceTypeFk">
+            <End Role="ZigBeeDeviceType" EntitySet="ZigBeeDeviceTypes" />
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevices" />
+          </AssociationSet>
+          <AssociationSet Name="DeviceCapability" Association="ZigBeeCoordinator.Lib.Models.Db.DeviceCapability">
+            <End Role="Capability" EntitySet="Capabilities" />
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevices" />
+          </AssociationSet>
+          <EntitySet Name="CoordinatorUsers" EntityType="ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser" />
+          <EntitySet Name="WirelessScaleDatas" EntityType="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData" />
+          <AssociationSet Name="WirelessScaleData_UserFk" Association="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_UserFk">
+            <End Role="CoordinatorUser" EntitySet="CoordinatorUsers" />
+            <End Role="WirelessScaleData" EntitySet="WirelessScaleDatas" />
+          </AssociationSet>
+          <AssociationSet Name="WirelessScaleData_ZigBeeDeviceFk" Association="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_ZigBeeDeviceFk">
+            <End Role="ZigBeeDevice" EntitySet="ZigBeeDevices" />
+            <End Role="WirelessScaleData" EntitySet="WirelessScaleDatas" />
+          </AssociationSet>
+          <EntitySet Name="UserSettings" EntityType="ZigBeeCoordinator.Lib.Models.Db.UserSetting" />
+          <AssociationSet Name="UserSetting_UserFk" Association="ZigBeeCoordinator.Lib.Models.Db.UserSetting_UserFk">
+            <End Role="CoordinatorUser" EntitySet="CoordinatorUsers" />
+            <End Role="UserSetting" EntitySet="UserSettings" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Capability">
+          <Key>
+            <PropertyRef Name="CapabilityId" />
+          </Key>
+          <Property Type="Int32" Name="CapabilityId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ZigBeeDevices" Relationship="ZigBeeCoordinator.Lib.Models.Db.DeviceCapability" FromRole="Capability" ToRole="ZigBeeDevice" />
+        </EntityType>
+        <EntityType Name="ZigBeeDevice">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceId" />
+          </Key>
+          <Property Type="Int32" Name="ZigBeeDeviceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Binary" Name="DeviceAddress" Nullable="false" MaxLength="8" FixedLength="false" />
+          <Property Type="Binary" Name="NetworkAddress" MaxLength="2" FixedLength="false" />
+          <Property Type="DateTime" Name="CreatedDateTime" Nullable="false" />
+          <Property Type="DateTime" Name="LastPacketDateTime" />
+          <NavigationProperty Name="ZigBeeDeviceLogs" Relationship="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceLogFk" FromRole="ZigBeeDevice" ToRole="ZigBeeDeviceLog" />
+          <Property Type="Int32" Name="ZigBeeDeviceTypeId" />
+          <NavigationProperty Name="ZigBeeDeviceType" Relationship="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceTypeFk" FromRole="ZigBeeDevice" ToRole="ZigBeeDeviceType" />
+          <NavigationProperty Name="Capabilities" Relationship="ZigBeeCoordinator.Lib.Models.Db.DeviceCapability" FromRole="ZigBeeDevice" ToRole="Capability" />
+          <NavigationProperty Name="WirelessScaleDatas" Relationship="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_ZigBeeDeviceFk" FromRole="ZigBeeDevice" ToRole="WirelessScaleData" />
+        </EntityType>
+        <EntityType Name="ZigBeeDeviceLog">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceLogId" />
+          </Key>
+          <Property Type="Int32" Name="ZigBeeDeviceLogId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ZigBeeDeviceId" Nullable="false" />
+          <Property Type="Binary" Name="PacketData" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <NavigationProperty Name="ZigBeeDevice" Relationship="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceLogFk" FromRole="ZigBeeDeviceLog" ToRole="ZigBeeDevice" />
+          <Property Type="DateTime" Name="DateTime" Nullable="false" />
+        </EntityType>
+        <Association Name="ZigBeeDevice_ZigBeeDeviceLogFk">
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice" Role="ZigBeeDevice" Multiplicity="1" />
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceLog" Role="ZigBeeDeviceLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Principal>
+            <Dependent Role="ZigBeeDeviceLog">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ZigBeeDeviceType">
+          <Key>
+            <PropertyRef Name="ZigBeeDeviceTypeId" />
+          </Key>
+          <Property Type="Int32" Name="ZigBeeDeviceTypeId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ZigBeeDevices" Relationship="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceTypeFk" FromRole="ZigBeeDeviceType" ToRole="ZigBeeDevice" />
+        </EntityType>
+        <Association Name="ZigBeeDevice_ZigBeeDeviceTypeFk">
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceType" Role="ZigBeeDeviceType" Multiplicity="0..1" />
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice" Role="ZigBeeDevice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDeviceType">
+              <PropertyRef Name="ZigBeeDeviceTypeId" />
+            </Principal>
+            <Dependent Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DeviceCapability">
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.Capability" Role="Capability" Multiplicity="*" />
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice" Role="ZigBeeDevice" Multiplicity="*" />
+        </Association>
+        <EntityType Name="CoordinatorUser">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="WirelessScaleDatas" Relationship="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_UserFk" FromRole="CoordinatorUser" ToRole="WirelessScaleData" />
+          <NavigationProperty Name="UserSettings" Relationship="ZigBeeCoordinator.Lib.Models.Db.UserSetting_UserFk" FromRole="CoordinatorUser" ToRole="UserSetting" />
+        </EntityType>
+        <EntityType Name="WirelessScaleData">
+          <Key>
+            <PropertyRef Name="WirelessScaleDataId" />
+          </Key>
+          <Property Type="Int32" Name="WirelessScaleDataId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="ZigBeeDeviceId" />
+          <Property Type="DateTime" Name="ReceivedDateTime" Nullable="false" />
+          <Property Type="Double" Name="Value" Nullable="false" />
+          <NavigationProperty Name="CoordinatorUser" Relationship="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_UserFk" FromRole="WirelessScaleData" ToRole="CoordinatorUser" />
+          <NavigationProperty Name="ZigBeeDevice" Relationship="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_ZigBeeDeviceFk" FromRole="WirelessScaleData" ToRole="ZigBeeDevice" />
+        </EntityType>
+        <Association Name="WirelessScaleData_UserFk">
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser" Role="CoordinatorUser" Multiplicity="1" />
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData" Role="WirelessScaleData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatorUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="WirelessScaleData">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WirelessScaleData_ZigBeeDeviceFk">
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice" Role="ZigBeeDevice" Multiplicity="0..1" />
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData" Role="WirelessScaleData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ZigBeeDevice">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Principal>
+            <Dependent Role="WirelessScaleData">
+              <PropertyRef Name="ZigBeeDeviceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserSetting">
+          <Key>
+            <PropertyRef Name="UserSettingId" />
+          </Key>
+          <Property Type="Int32" Name="UserSettingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Value" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CoordinatorUser" Relationship="ZigBeeCoordinator.Lib.Models.Db.UserSetting_UserFk" FromRole="UserSetting" ToRole="CoordinatorUser" />
+        </EntityType>
+        <Association Name="UserSetting_UserFk">
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser" Role="CoordinatorUser" Multiplicity="1" />
+          <End Type="ZigBeeCoordinator.Lib.Models.Db.UserSetting" Role="UserSetting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoordinatorUser">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserSetting">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZigBeeCoordinatorLibModelsDbStoreContainer" CdmEntityContainer="ZigBeeCoordinatorEntities">
+          <EntitySetMapping Name="Capabilities">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.Capability">
+              <MappingFragment StoreEntitySet="Capability">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CapabilityId" ColumnName="CapabilityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZigBeeDevices">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice">
+              <MappingFragment StoreEntitySet="ZigBeeDevice">
+                <ScalarProperty Name="ZigBeeDeviceTypeId" ColumnName="ZigBeeDeviceTypeId" />
+                <ScalarProperty Name="LastPacketDateTime" ColumnName="LastPacketDateTime" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="NetworkAddress" ColumnName="NetworkAddress" />
+                <ScalarProperty Name="DeviceAddress" ColumnName="DeviceAddress" />
+                <ScalarProperty Name="ZigBeeDeviceId" ColumnName="ZigBeeDeviceId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZigBeeDeviceLogs">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceLog">
+              <MappingFragment StoreEntitySet="ZigBeeDeviceLog">
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="PacketData" ColumnName="PacketData" />
+                <ScalarProperty Name="ZigBeeDeviceId" ColumnName="ZigBeeDeviceId" />
+                <ScalarProperty Name="ZigBeeDeviceLogId" ColumnName="ZigBeeDeviceLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZigBeeDeviceTypes">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceType">
+              <MappingFragment StoreEntitySet="ZigBeeDeviceType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ZigBeeDeviceTypeId" ColumnName="ZigBeeDeviceTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="DeviceCapability" TypeName="ZigBeeCoordinator.Lib.Models.Db.DeviceCapability" StoreEntitySet="DeviceCapability">
+            <EndProperty Name="ZigBeeDevice">
+              <ScalarProperty Name="ZigBeeDeviceId" ColumnName="ZigBeeDeviceId" />
+            </EndProperty>
+            <EndProperty Name="Capability">
+              <ScalarProperty Name="CapabilityId" ColumnName="CapabilityId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="CoordinatorUsers">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser">
+              <MappingFragment StoreEntitySet="CoordinatorUser">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WirelessScaleDatas">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData">
+              <MappingFragment StoreEntitySet="WirelessScaleData">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="ReceivedDateTime" ColumnName="ReceivedDateTime" />
+                <ScalarProperty Name="ZigBeeDeviceId" ColumnName="ZigBeeDeviceId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="WirelessScaleDataId" ColumnName="WirelessScaleDataId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSettings">
+            <EntityTypeMapping TypeName="ZigBeeCoordinator.Lib.Models.Db.UserSetting">
+              <MappingFragment StoreEntitySet="UserSetting">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserSettingId" ColumnName="UserSettingId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ZigBeeCoordinatorModel" ZoomLevel="74">
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.Capability" Width="1.5" PointX="0.75" PointY="0.875" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice" Width="1.5" PointX="0.75" PointY="5.25" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceLog" Width="1.875" PointX="3" PointY="5.25" Height="1.7879850260416683" />
+        <AssociationConnector Association="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceLogFk" >
+          <ConnectorPoint PointX="2.25" PointY="6.2401432291666667" />
+          <ConnectorPoint PointX="3" PointY="6.2401432291666667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDeviceType" Width="1.5" PointX="0.75" PointY="8.875" Height="1.5956835937499996" />
+        <AssociationConnector Association="ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice_ZigBeeDeviceTypeFk" >
+          <ConnectorPoint PointX="1.5" PointY="8.875" />
+          <ConnectorPoint PointX="1.5" PointY="8.1917936197916656" />
+        </AssociationConnector>
+        <AssociationConnector Association="ZigBeeCoordinator.Lib.Models.Db.DeviceCapability" >
+          <ConnectorPoint PointX="1.5" PointY="2.6629850260416674" />
+          <ConnectorPoint PointX="1.5" PointY="5.25" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.CoordinatorUser" Width="1.5" PointX="3.375" PointY="0.75" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData" Width="1.5" PointX="5.625" PointY="3.25" Height="2.3648893229166674" />
+        <AssociationConnector Association="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_UserFk" >
+          <ConnectorPoint PointX="4.875" PointY="2.7302864583333335" />
+          <ConnectorPoint PointX="5.25" PointY="3.1052864583333335" />
+          <ConnectorPoint PointX="5.25" PointY="2.875" />
+          <ConnectorPoint PointX="5.625" PointY="3.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="ZigBeeCoordinator.Lib.Models.Db.WirelessScaleData_ZigBeeDeviceFk" >
+          <ConnectorPoint PointX="2.25" PointY="7.7422900390625" />
+          <ConnectorPoint PointX="6.375" PointY="7.7422900390625" />
+          <ConnectorPoint PointX="6.375" PointY="5.6148893229166674" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ZigBeeCoordinator.Lib.Models.Db.UserSetting" Width="1.5" PointX="5.625" PointY="0.75" Height="1.9802864583333317" />
+        <AssociationConnector Association="ZigBeeCoordinator.Lib.Models.Db.UserSetting_UserFk" >
+          <ConnectorPoint PointX="4.875" PointY="1.708890729166666" />
+          <ConnectorPoint PointX="5.625" PointY="1.708890729166666" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,31 @@
+Circuit/PCB
+2010/10/01 - polarity protection not working
+2010/10/20 - adjust footprint of R15 (pot) or get different pots
+2010/10/01 - fix clearance between ICSP3 and gyro/accels
+2010/10/01 - add reciever logic level converter
+2010/10/01 - flip ICSP1 (hard to connect to programmer)
+2010/10/01 - add power led
+2010/10/01 - add more room for heat sinks
+2010/10/01 - move receiver led so it's easier to see when receiver is plugged in
+2010/10/19 - Center gyro/accels on PCB
+2010/10/18 - Make PCB square
+           - add second 3v3 regulator for analog sensors
+           - change package of 3v3 regulator (check power requirements)
+2010/10/19 - add test points for gyro/accel
+XXXXXXXXXX - add bypass caps to aref (bypass cap already right next aref)
+2010/10/19 - add jumper to measure amperage
+2010/10/19 - add power distribution holes
+2010/10/20 - add direction to PCB (front, back, left, right)
+ 
+Main Core Code
+2010/10/01 - reset integration error when controller is out of threshold (not trying to hover)
+ 
+Ground Control
+2010/10/01 - store user selected check boxes
+2010/10/01 - add number of seconds to keep on graphing
+2010/10/01 - add clear button to graph
+2010/10/19 - add pause to graph
+2010/10/01 - allow setting windup guard
+2010/10/01 - allow setting gain of controls
+2010/10/01 - enable rendering of client screens based on selected tab
+

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--This file is meant to be opened with AVR Project IDE, http://code.google.com/p/avr-project-ide/ -->
+<Project>
+  <DirPath>F:\dev\home\fivevolt\WirelessScale\Firmware</DirPath>
+  <HasBeenConfigged>true</HasBeenConfigged>
+  <Device>atmega328p</Device>
+  <ClockFreq>1000000.00</ClockFreq>
+  <LinkerOpt />
+  <OtherOpt>-Wall -gdwarf-2</OtherOpt>
+  <OtherOptionsForC>-std=gnu99</OtherOptionsForC>
+  <OtherOptionsForCPP />
+  <OtherOptionsForS />
+  <OutputDir>output</OutputDir>
+  <Optimization>-Os</Optimization>
+  <UseInitStack>false</UseInitStack>
+  <InitStackAddr>0xFFFF</InitStackAddr>
+  <PackStructs>true</PackStructs>
+  <ShortEnums>true</ShortEnums>
+  <UnsignedBitfields>true</UnsignedBitfields>
+  <UnsignedChars>true</UnsignedChars>
+  <FunctionSections>true</FunctionSections>
+  <DataSections>true</DataSections>
+  <IncludeDirList>
+    <DirPath>F:\dev\home\fivevolt\ATmegaLib</DirPath>
+  </IncludeDirList>
+  <LibraryDirList />
+  <LinkObjList />
+  <LinkLibList />
+  <MemorySegList />
+  <BurnPart>atmega328p</BurnPart>
+  <BurnProgrammer>avrispmkii</BurnProgrammer>
+  <BurnOptions />
+  <BurnPort />
+  <BurnFuseBox />
+  <BurnBaud>0</BurnBaud>
+  <BurnAutoReset>false</BurnAutoReset>
+  <LastFile>WirelessScale.cpp</LastFile>
+  <FileList>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\WirelessScale\Firmware\WirelessScale.cpp'-->
+      <RelPath>WirelessScale.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>true</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\IO.cpp'-->
+      <RelPath>..\..\ATmegaLib\IO.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\IO.h'-->
+      <RelPath>..\..\ATmegaLib\IO.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\XBee.cpp'-->
+      <RelPath>..\..\ATmegaLib\XBee.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\XBee.h'-->
+      <RelPath>..\..\ATmegaLib\XBee.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>false</WasOpen>
+      <CursorPos>0</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\XBeeFiveVoltProtocol.cpp'-->
+      <RelPath>..\..\ATmegaLib\XBeeFiveVoltProtocol.cpp</RelPath>
+      <ToCompile>true</ToCompile>
+      <Options />
+      <WasOpen>true</WasOpen>
+      <CursorPos>2046</CursorPos>
+      <Bookmarks />
+    </File>
+    <File>
+      <!--AbsPath: 'F:\dev\home\fivevolt\ATmegaLib\XBeeFiveVoltProtocol.h'-->
+      <RelPath>..\..\ATmegaLib\XBeeFiveVoltProtocol.h</RelPath>
+      <ToCompile>false</ToCompile>
+      <Options />
+      <WasOpen>true</WasOpen>
+      <CursorPos>911</CursorPos>
+      <Bookmarks />
+    </File>
+  </FileList>
+  <ArduinoCoreOverride />
+  <AVRStudioXMLStuff />
+</Project>

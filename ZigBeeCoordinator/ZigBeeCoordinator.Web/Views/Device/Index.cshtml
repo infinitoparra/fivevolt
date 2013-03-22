@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Admin: Devices";
+}
+<h2>@ViewBag.Message</h2>
+<p>
+    <table>
+        <thead>
+            <tr>
+                <th>Device Address</th>
+                <th>Network Address</th>
+                <th>Device Type</th>
+                <th>Created</th>
+                <th>Last Packet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <h3>ZigBee Devices</h3>
+            @foreach (ZigBeeCoordinator.Lib.Models.Db.ZigBeeDevice device in ViewBag.Devices)
+            {
+                <tr>
+                    <td>@Html.ActionLink(@device.DeviceAddressHtml, "Detail", new { id = device.ZigBeeDeviceId })</td>
+                    <td>@device.NetworkAddressHtml</td>
+                    <td>@( device.ZigBeeDeviceType == null ? "" : device.ZigBeeDeviceType.Name )</td>
+                    <td>@device.CreatedDateTime</td>
+                    <td>@device.LastPacketDateTime</td>
+                </tr>        
+            }
+        </tbody>
+    </table>
+</p>
